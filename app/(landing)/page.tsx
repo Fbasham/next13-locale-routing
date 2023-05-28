@@ -13,18 +13,19 @@ export default function Landing() {
             width={0}
             height={0}
           />
-          <div className="flex gap-5 p-5 justify-center gap-10">
+          <div className="flex gap-5 p-5 justify-center md:gap-10">
             <Link
               href="/en/home"
-              className="p-2 bg-indigo-700 text-white rounded-md hover:bg-indigo-900 offset-border"
+              className="p-2 bg-indigo-700 text-white rounded-md hover:bg-indigo-900 offset-border grow text-center"
             >
               English
             </Link>
             <Link
               href="/fr/home"
-              className="p-2 bg-indigo-700 text-white rounded-md hover:bg-indigo-900 offset-border"
+              lang="fr"
+              className="p-2 bg-indigo-700 text-white rounded-md hover:bg-indigo-900 offset-border grow text-center"
             >
-              French
+              Français
             </Link>
           </div>
         </div>

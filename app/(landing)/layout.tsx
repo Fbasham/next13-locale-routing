@@ -1,10 +1,8 @@
 import "../globals.css";
 
-export default function RootLayout({ children, params }) {
-  let lang = params.lang;
-  if (!/^(en|fr)$/.test(lang)) lang = "en";
+export default function RootLayout({ children }) {
   return (
-    <html lang={lang}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

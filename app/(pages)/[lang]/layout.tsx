@@ -1,8 +1,6 @@
+import Breadcrumb from "@/app/components/Breadcrumb";
 import "../../globals.css";
-import Image from "next/image";
 
-import logo from "../../../public/logo-large.svg";
-import Link from "next/link";
 import Nav from "@/app/components/Nav";
 
 export default function RootLayout({ children, params }) {
@@ -11,8 +9,11 @@ export default function RootLayout({ children, params }) {
   return (
     <html lang={lang}>
       <body>
-        <Nav />
-        <main className="m-2 md:m-10 max-w-7xl">{children}</main>
+        <Nav lang={lang} />
+        <main className="mx-2 md:mx-10 max-w-7xl">
+          <Breadcrumb lang={lang} />
+          {children}
+        </main>
       </body>
     </html>
   );
