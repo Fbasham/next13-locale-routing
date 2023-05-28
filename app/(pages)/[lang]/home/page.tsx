@@ -11,7 +11,7 @@ export async function generateMetadata({ params: { lang } }) {
 export default async function Home({ params: { lang } }) {
   const { t } = await useTranslation(lang, "home");
   return (
-    <main>
+    <>
       <h1>{t("title")}</h1>
       <ul className="list-disc list-inside">
         <li>
@@ -19,7 +19,12 @@ export default async function Home({ params: { lang } }) {
             {t("about-page")}
           </Link>
         </li>
+        <li>
+          <Link href={`/${lang}/home/learn`} className="underline">
+            {t("learn-page")}
+          </Link>
+        </li>
       </ul>
-    </main>
+    </>
   );
 }

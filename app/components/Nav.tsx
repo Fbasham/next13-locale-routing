@@ -9,11 +9,11 @@ export default function Nav({ lang }) {
   let path = usePathname();
 
   return (
-    <nav className="flex justify-between marker p-2 md:p-10 border-b min-h-[3rem]">
+    <nav className="flex justify-between marker p-2 md:p-10 border-b min-h-[3rem] items-center">
       <Image
         src={logo}
         alt=""
-        className="max-h-[1.5rem] md:max-h-[2rem]"
+        className="max-h-[1.2rem] md:max-h-[2rem]"
         height={0}
         width={0}
       />

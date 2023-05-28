@@ -3,9 +3,13 @@ import "../../globals.css";
 
 import Nav from "@/app/components/Nav";
 
-export default function RootLayout({ children, params }) {
-  let lang = params.lang;
-  if (!/^(en|fr)$/.test(lang)) lang = "en";
+export const metadata = {
+  icons: {
+    icon: "/flag.ico",
+  },
+};
+
+export default function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <body>
